@@ -14,6 +14,8 @@ alias suckit='sudo cp config.def.h config.h && sudo make clean install'
 alias gotodwm='cd ~/.config/dwm/'
 alias gotost='cd ~/.config/st/'
 alias gotodmenu='cd ~/.config/dmenu/'
+alias gotobar='cd ~/.config/dwm-bar/'
+
 # Ignore duplicates and spaces
 export HISTCONTROL=ignoreboth
 
