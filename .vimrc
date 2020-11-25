@@ -30,9 +30,15 @@ Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
 " gruvbox
 colorscheme gruvbox
 set background=dark
+
+" nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif       "close nerdtree if no file is open
+    " Hotkey for opening nerdtree (Ctrl+N)
+    map <C-n> :NERDTreeToggle<CR>
