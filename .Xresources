@@ -1,0 +1,6 @@
+! These are comments
+
+! configs for sxiv
+Sxiv.background: #282828
+Sxiv.foreground: #d79921
+Sxiv.font: Iosevka-9
