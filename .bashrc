@@ -15,6 +15,7 @@ alias gotodwm='cd ~/.config/dwm/'
 alias gotost='cd ~/.config/st/'
 alias gotodmenu='cd ~/.config/dmenu/'
 alias gotobar='cd ~/.config/dwm-bar/'
+alias edit='vim config.def.h'
 
 # Ignore duplicates and spaces
 export HISTCONTROL=ignoreboth
