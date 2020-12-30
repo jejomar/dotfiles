@@ -31,6 +31,7 @@ Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'scrooloose/nerdtree'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
