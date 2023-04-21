@@ -10,7 +10,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Run pfetch on new windows
-pfetch
+# pfetch
 
 # Custom aliases
 alias playground='. /home/lichi/.local/share/virtualenvs/playground-LddSAEqJ/bin/activate'
