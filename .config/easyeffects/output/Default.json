@@ -1,0 +1,45 @@
+{
+    "output": {
+        "blocklist": [
+            "Chromium"
+        ],
+        "equalizer#0": {
+            "balance": 0.0,
+            "bypass": false,
+            "input-gain": 0.0,
+            "left": {
+                "band0": {
+                    "frequency": 300.0,
+                    "gain": 0.0,
+                    "mode": "APO (DR)",
+                    "mute": false,
+                    "q": 0.7,
+                    "slope": "x1",
+                    "solo": false,
+                    "type": "Lo-shelf"
+                }
+            },
+            "mode": "IIR",
+            "num-bands": 1,
+            "output-gain": 0.0,
+            "pitch-left": 0.0,
+            "pitch-right": 0.0,
+            "right": {
+                "band0": {
+                    "frequency": 300.0,
+                    "gain": 0.0,
+                    "mode": "APO (DR)",
+                    "mute": false,
+                    "q": 0.7,
+                    "slope": "x1",
+                    "solo": false,
+                    "type": "Lo-shelf"
+                }
+            },
+            "split-channels": false
+        },
+        "plugins_order": [
+            "equalizer#0"
+        ]
+    }
+}

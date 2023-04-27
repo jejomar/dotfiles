@@ -1,0 +1,3 @@
+[Default]
+save_dir=$HOME/Pictures/Screenshots/Grim
+save_filename_format=%G%m%d-%H%M%S_swappy.png

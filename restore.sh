@@ -7,4 +7,6 @@ cp -v .vimrc $HOME
 cp -v .bashrc $HOME
 
 # Restore folders in .config/
-rsync -rv .config $HOME/
+rsync -av .config $HOME/
+rsync -av .themes $HOME/
+rsync -av .icons $HOME/
