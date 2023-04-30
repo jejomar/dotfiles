@@ -1,13 +1,14 @@
 * {
-    font-family: "Andika";
+    font-family: "Iosevka Nerd Font";
+    font-weight: bold;
     font-size: 12px;
     border: none;
     border-radius: 4;
+    min-height: 0px;
 }
 
 window#waybar {
-    background-color: rgba(28, 28, 28, 0);
-    border-bottom: 0px solid rgba(100, 114, 125, 0.6);
+    background-color: rgba(40, 40, 40, 0.8);
     color: #ebdbb2;
     transition-property: background-color;
     transition-duration: .5s;
@@ -30,40 +31,38 @@ window#waybar.chromium {
 button {
     color: #282828;
     /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each button name */
     border: none;
-    margin: 2px 2px;
+    margin: 0px 2px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #458588;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 2px 4px;
     background-color: transparent;
     color: #fbf1c7;
 }
 
 #workspaces button:hover {
-    background: rgba(40, 40, 40, 0.4);
+    background: rgba(124, 111, 100, 0.5);
 }
 
 #workspaces button.active {
-    background-color: #3c3836;
-    box-shadow: inset 0 -3px #458588;
+    color: #282828;
+    background-color: #458588;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #cc241d;
 }
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 #clock,
@@ -84,15 +83,13 @@ button:hover {
 #custom-wlogout
 #mpd {
     padding: 0 4px;
-    margin: 6px 0px;
+    margin: 2px 0px;
     color: #ffffff;
 }
 
 #window,
 #workspaces {
-    margin: 6px 4px;
-    background-color: #d79921;
-    color: #1d2021;
+    margin: 4px 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -107,28 +104,20 @@ button:hover {
 
 #clock {
     color: #fbf1c7;
-    background-color: #d79921;
 }
 
 #custom-wlogout {
-    background-color: #fb4934;
     color: #fbf1c7;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-right: 6px;
+    padding-right: 16px;
+    padding-left: 4px;
 }
 
 #battery {
     color: #fbf1c7;
-    background-color: #d79921;
-
 }
 
 #battery.charging, #battery.plugged {
     color: #fbf1c7;
-    background-color: #689d6a;
 }
 
 @keyframes blink {
@@ -167,12 +156,10 @@ label:focus {
 
 #backlight {
     color: #1d2021;
-    background-color: #d79921;
 }
 
 #network {
     color: #fcf1c7;
-    background-color: #d79921;
 }
 
 #network.disconnected {
@@ -182,7 +169,6 @@ label:focus {
 
 #pulseaudio {
     color: #fcf1c7;
-    background-color: #d79921;
 }
 
 #pulseaudio.muted {
@@ -191,12 +177,10 @@ label:focus {
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    color: #fcf1c7;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
 }
 
 #custom-media {
@@ -222,7 +206,6 @@ label:focus {
 }
 
 #tray {
-    background-color: #d79921;
     margin-left: 6px;
 }
 
@@ -260,3 +243,8 @@ label:focus {
 #mpd.paused {
     background-color: #51a37a;
 }
+
+#custom.wf-recorder {
+    color: #fbf1c7;
+}
+

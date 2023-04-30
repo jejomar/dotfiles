@@ -11,6 +11,8 @@ autocmd InsertEnter * norm zz
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+" --- Bindings ---- "
+
 " General Settings
 syntax on
 set ignorecase

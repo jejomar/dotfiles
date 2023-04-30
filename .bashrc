@@ -22,10 +22,10 @@ nitch
 # Custom aliases
 alias playground='. /home/lichi/.local/share/virtualenvs/playground-LddSAEqJ/bin/activate'
 alias tree='tree -aC -L 3 -I '.git''
-alias rec='wf-recorder -f $HOME/Videos/Recordings/$(date +%Y%m%d-%H%M%S.mkv) -g "$(slurp)"'
 
 # Editing configs
-alias wb='vim /home/lichi/.config/waybar/style.css'
+alias wbst='vim /home/lichi/.config/waybar/style.css'
+alias wbcn='vim /home/lichi/.config/waybar/config'
 alias hl='vim /home/lichi/.config/hypr/hyprland.conf'
 alias hp='vim /home/lichi/.config/hypr/hyprpaper.conf'
 

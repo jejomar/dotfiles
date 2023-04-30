@@ -1,149 +1,98 @@
 {
-    "layer": "bottom", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 8,
 
-    // Choose the order of the modules
-    "modules-left": ["tray"],
+    "modules-left": ["tray", "custom/wf-recorder"],
     "modules-center": ["wlr/workspaces"],
-    "modules-right": ["pulseaudio", "network", "battery", "clock", "custom/wlogout"],
+    "modules-right": ["wireplumber", "network", "battery", "clock", "custom/wlogout"],
 
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 5
+        "icon-size": 14,
+        "spacing": 8
     },
+
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%a, %d %b %Y | %R}"
+        "format": "[ {:%a, %d %b %Y | %R} ]"
     },
+
     "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% <span font='Font Awesome 6 Free 10'>{icon}</span>",
+        "format": "{percent}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip-format": "Battery is at {percent}%"
     },
+
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% <span font='Font Awesome 6 Free 10'>{icon}</span>",
-        "format-charging": "{capacity}% <span font='Font Awesome 6 Free 10'></span>",
-        "format-plugged": "{capacity}% <span font='Font Awesome 6 Free 10'></span>",
-        // "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
+        "format-charging": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
+        "format-plugged": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
         "format-icons": ["", "", "", "", ""]
     },
+
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        // "format-wifi": "{essid} ({signalStrength}%) <span font='Font Awesome 6 Free 10'></span>",
-        "format-wifi": "{essid} <span font='Font Awesome 6 Free 10'></span>",
-        "format-ethernet": "{ipaddr}/{cidr} <span font='Font Awesome 6 Free 10'></span>",
-        "tooltip-format": "{ifname} via {gwaddr} <span font='Font Awesome 6 Free 10'></span>",
-        "format-linked": "{ifname} (No IP) <span font='Font Awesome 6 Free 10'></span>",
-        "format-disconnected": "Disconnected <span font='Font Awesome 6 Free 10'>⚠</span>",
-        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "[ {essid} <span font='Font Awesome 6 Free Solid 10'></span> ]",
+        "format-ethernet": "[ {ipaddr}/{cidr} <span font='Font Awesome 6 Free Solid 10'></span> ]",
+        "tooltip-format": "[ {ifname} via {gwaddr} <span font='Font Awesome 6 Free Solid 10'></span> ]",
+        "format-linked": "[ {ifname} (No IP) <span font='Font Awesome 6 Free Solid 10'></span> ]",
+        "format-disconnected": "[ Disconnected <span font='Font Awesome 6 Free Solid 10'>⚠</span> ]",
     },
-    "pulseaudio": {
-        "scroll-step": 2, // %, can be a float
-        "format": "{volume}% <span font='Font Awesome 6 Free 10'>{icon}</span>",
-        "format-bluetooth": "{volume}% <span font='Font Awesome 6 Free 10'>{icon} </span>",
-        // "format-bluetooth-muted": "<span font='Font Awesome 6 Free 10'> {icon} </span>",
-        "format-muted": "<span font='Font Awesome 6 Free 10'></span>",
-        // "format-source": "{volume}% <span font='Font Awesome 6 Free 10'></span>",
-        // "format-source-muted": "<span font='Font Awesome 6 Free 10'></span>",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        //"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
+
+	"wireplumber": {
+		"format": "[ {volume}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
+		"format-muted": "[ Muted <span font='Font Awesome 6 Free Solid 10'></span> ]",
+		// "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click": "pavucontrol",
+		"on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 2%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
+		"format-icons": ["", "", ""]
+	},
+
     "wlr/workspaces": {
         "sort-by-name": true,
         "sort-by-coordinates": true,
         "sort-by-number": true,
         "format": "{icon}",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
         "on-click": "activate",
         "format-icons": {
-            "1": "1 <span font='Font Awesome 6 Free 10'></span>",
-            "2": "2 <span font='Font Awesome 6 Free 10'></span>",
-            "3": "3 <span font='Font Awesome 6 Free 10'></span>",
-            "4": "4 <span font='Font Awesome 6 Free 10'></span>",
-            "5": "5 <span font='Font Awesome 6 Free 10'></span>",
-            "6": "6 <span font='Font Awesome 6 Free 10'></span>",
-            "7": "7 <span font='Font Awesome 6 Free 10'></span>",
-            "8": "8 <span font='Font Awesome 6 Free 10'></span>",
-            "9": "9 <span font='Font Awesome 6 Free 10'></span>",
-            "10": "10 <span font='Font Awesome 6 Free 10'></span>",
-            "11": "11 <span font='Font Awesome 6 Free 10'></span>"
-        } 
+            "1": "1 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "2": "2 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "3": "3 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "4": "4 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "5": "5 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "6": "6 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "7": "7 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "8": "8 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "9": "9 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "10": "10 <span font='Font Awesome 6 Free Solid 10'></span>",
+            "11": "11 <span font='Font Awesome 6 Free Solid 10'></span>"
+        }
     },
+
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true
     },
+
     "custom/wlogout": {
         "format": "",
         "interval": "once",
         "on-click": "wlogout -c 10 -r 10 -p layer-shell"
-    }
+    },
+
+    "custom/wf-recorder": {
+        "format": "<span font='Font Awesome 6 Free Solid 10'>{}</span>",
+        "return-type": "json",
+        "interval": 5,
+        "signal": 8,
+        "exec": "$HOME/.config/waybar/scripts/update-wfrecorder-icon.sh",
+        "on-click": "exec $HOME/.config/waybar/scripts/selection-record.sh",
+        "on-click-middle": "exec $HOME/.config/waybar/scripts/monitor-record.sh"
+    },
 }
 
