@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.usb-Synaptics_KM-HIFI-384KHZ-00.analog-stereo",
+    "device-description": "KM-HIFI-384KHZ Analog Stereo",
+    "device-profile": "analog-output",
+    "preset-name": "Default"
+}
