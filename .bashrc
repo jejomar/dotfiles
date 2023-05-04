@@ -17,7 +17,7 @@ alias rf='source ~/.bashrc'
 PS1='[\u@\h \W]\$ '
 
 # Run fetch on new windows
-nitch
+pfetch
 
 # Custom aliases
 alias playground='. /home/lichi/.local/share/virtualenvs/playground-LddSAEqJ/bin/activate'

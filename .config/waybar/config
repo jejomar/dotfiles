@@ -4,9 +4,24 @@
     "height": 26,
     "spacing": 8,
 
-    "modules-left": ["tray", "custom/wf-recorder"],
-    "modules-center": ["wlr/workspaces"],
-    "modules-right": ["wireplumber", "network", "battery", "clock", "custom/wlogout"],
+    "modules-left": [
+        "tray",
+		"custom/arrow01",
+        "custom/wf-recorder",
+    ],
+
+    "modules-center": [
+        "wlr/workspaces"
+    ],
+
+    "modules-right": [
+        "wireplumber",
+        "backlight",
+        "network",
+        "battery",
+        "clock",
+        "custom/wlogout"
+    ],
 
     "tray": {
         "icon-size": 14,
@@ -19,7 +34,7 @@
     },
 
     "backlight": {
-        "format": "{percent}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
+        "format": "[ {percent}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip-format": "Battery is at {percent}%"
     },
@@ -30,7 +45,7 @@
             "critical": 15
         },
         "format": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
-        "format-charging": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
+        "format-charging": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
         "format-plugged": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
         "format-icons": ["", "", "", "", ""]
     },
@@ -94,5 +109,10 @@
         "on-click": "exec $HOME/.config/waybar/scripts/selection-record.sh",
         "on-click-middle": "exec $HOME/.config/waybar/scripts/monitor-record.sh"
     },
+
+	"custom/arrow01": {
+		"format": "<span font='Font Awesome 6 Free Solid 16'></span>",
+		"tooltip": false,
+	},
 }
 
