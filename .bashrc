@@ -8,6 +8,7 @@
 # Environment variables
 export HISTCONTROL=ignoreboth:erasedups
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export EDITOR=vim
 
 alias ls='ls --group-directories-first --color=auto'
 alias ll='ls -l --group-directories-first --color=auto'
