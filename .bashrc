@@ -23,12 +23,18 @@ pfetch
 # Custom aliases
 alias playground='. /home/lichi/.local/share/virtualenvs/playground-LddSAEqJ/bin/activate'
 alias tree='tree -aC -L 3 -I '.git''
+alias yayu='yay -Syu --devel'
+alias vf='vifm'
+alias v='vim'
 
 # Editing configs
 alias wbst='vim /home/lichi/.config/waybar/style.css'
 alias wbcn='vim /home/lichi/.config/waybar/config'
 alias hl='vim /home/lichi/.config/hypr/hyprland.conf'
 alias hp='vim /home/lichi/.config/hypr/hyprpaper.conf'
+alias vimrc='vim /home/lichi/.vimrc'
+alias bashrc='vim /home/lichi/.bashrc'
+alias vfrc='vim /home/lichi/.config/vifm/vifmrc'
 
 # Shortcut to dirs
 alias scrp='cd $HOME/projects/scripts'

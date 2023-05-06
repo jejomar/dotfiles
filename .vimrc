@@ -1,4 +1,4 @@
-" Plugins loading
+" PLUGINS ---------------------------------------- {{{
 call plug#begin()
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
@@ -7,6 +7,7 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
+" }}}
 
 " Theming
 let g:airline_powerline_fonts = 1
@@ -21,7 +22,7 @@ autocmd InsertEnter * norm zz
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-" ---- General Key Mapping ---- "
+" KEY MAPPINGS ---------------------------------------- {{{
 " Only paste yanked text, not deleted
 nnoremap <leader>p "0p
 nnoremap <leader>P "0P
@@ -29,17 +30,27 @@ nnoremap <leader>P "0P
 " Write only if something is changed
 nnoremap <leader>w :up<CR>
 
+" Quick exit
+nnoremap <leader>q :q<CR>
+
+" Clear search highlighting
+nnoremap <C-l> :noh<CR>
+
 " ---- Plugin Key Mapping ---- "
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+" }}}
 
 " General Settings
 syntax on
-set wrap
-set nocompatible
+set nowrap
+set nocompatible        " Disable vi compatibility
+filetype on             " Enable file type detection
+filetype plugin on      " Enable and loag plugins for file type
+filetype indent on      " Load an indent file for file type
 set ignorecase
 set smartcase
 set incsearch
@@ -56,6 +67,10 @@ set softtabstop=4
 set smarttab
 set autoindent
 
+" Folding
+set foldmethod=marker   " Enable folding using {{{ }}} markers
+set nofoldenable        " No folded lines when opeing files
+
 " User Interface Options
 set laststatus=2
 
@@ -67,6 +82,10 @@ set splitbelow splitright
 
 " Allow easy buffer switching
 set hidden
+
+" NERD TREE {{{
+" PLACEHOLDER
+" }}}
 
 " Fix weird escape sequence of devicons
 set t_RV=

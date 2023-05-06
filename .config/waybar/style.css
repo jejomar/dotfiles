@@ -39,7 +39,7 @@ button {
     /* Use box-shadow instead of border so the text isn't offset */
     /* Avoid rounded borders under each button name */
     border: none;
-    margin: 0px 2px;
+    margin: 0px 0px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -48,7 +48,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 2px 2px;
+    padding: 2px 4px 2px 4px;
     background-color: transparent;
     color: #fbf1c7;
     border-radius: 4px;
@@ -217,10 +217,8 @@ label:focus {
 #tray {
     padding-left: 8px;
     padding-right: 4px;
-	background-color: @n_blue;
+	/* background-color: @n_blue; */
 	border-radius: 0;
-    margin-top: 1.5px;
-    margin-bottom: 1.5px;
 }
 
 #tray > .passive {

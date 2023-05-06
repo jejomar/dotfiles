@@ -1,0 +1,17 @@
+" GENERAL ---------- {{{
+set number              " Show line numbers
+set relativenumber      " Show relative line numbers
+set trash               " Deleted files will go to Trash
+set wildmenu            " Show list of matches on tab completion
+set wildstyle=popup     " Completions will popup
+set sort=+iname         " Sort by name (ignore case)
+
+" }}}
+
+
+" APPEARANCE ---------- {{{
+colorscheme Gruvbox
+source $HOME/.config/vifm/scripts/favicons.vifm         " Show icons
+
+" }}}
+

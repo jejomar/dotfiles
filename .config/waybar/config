@@ -2,11 +2,10 @@
     "layer": "top",
     "position": "top",
     "height": 26,
-    "spacing": 8,
+    "spacing": 2,
 
     "modules-left": [
         "tray",
-		"custom/arrow01",
         "custom/wf-recorder",
     ],
 
@@ -24,8 +23,8 @@
     ],
 
     "tray": {
-        "icon-size": 14,
-        "spacing": 8
+        "icon-size": 16,
+        "spacing": 4
     },
 
     "clock": {
@@ -111,7 +110,7 @@
     },
 
 	"custom/arrow01": {
-		"format": "<span font='Font Awesome 6 Free Solid 16'></span>",
+		"format": "<span font='Font Awesome 6 Free Solid 14'></span>",
 		"tooltip": false,
 	},
 }
