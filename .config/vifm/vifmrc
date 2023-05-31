@@ -1,10 +1,18 @@
 " GENERAL ---------- {{{
-set number              " Show line numbers
-set relativenumber      " Show relative line numbers
-set trash               " Deleted files will go to Trash
-set wildmenu            " Show list of matches on tab completion
-set wildstyle=popup     " Completions will popup
-set sort=+iname         " Sort by name (ignore case)
+set number                                              " Show line numbers
+set relativenumber                                      " Show relative line numbers
+set trash                                               " Deleted files will go to Trash
+set trashdir=$HOME/.local/share/Trash/files             " Set Trash directory
+set wildmenu                                            " Show list of matches on tab completion
+set wildstyle=popup                                     " Completions will popup
+set sort=+iname                                         " Sort by name (ignore case)
+set vicmd=vifm                                          " Open scripts with vim
+
+" Searching
+set ignorecase                                          " Ignore case when searcing
+set smartcase                                           " Respect case sensitivity for patterns with uppercase
+set nohlsearch                                          " Don't auto highlight search results
+set incsearch                                           " Search while typing
 
 " }}}
 
@@ -13,5 +21,48 @@ set sort=+iname         " Sort by name (ignore case)
 colorscheme Gruvbox
 source $HOME/.config/vifm/scripts/favicons.vifm         " Show icons
 
+" }}}
+
+
+" BOOKMARKS ---------- {{{
+mark h ~
+mark d ~/Downloads
+mark v ~/Videos
+mark c ~/.config
+mark g ~/projects/dotfiles
+mark s ~/projects/scripts
+
+" }}}
+
+
+" KEY MAPPINGS ---------- {{{
+nnoremap <C-p> :view<CR>                                " Make right pane second pane
+nnoremap <C-q> :q<CR>                                   " Fast quit
+
+" }}}
+
+
+" FILE ASSOCIATIONS ---------- {{{
+
+" Video
+filextype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
+          \ *.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
+          \ *.as[fx]},<video/*>,
+          \ {Play using mpv}
+          \ mpv --really-quiet %c %s
+
+" Images
+filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<audio/*>,
+          \ {Open using ristretto}
+          \ ristretto %f
+
+" PDFs
+filextype {*.pdf},<application/pdf>
+          \ {Open using mupdf}
+          \ mupdf %f
+" Documents
+filextype {*odt, *.docx, *.doc},
+          \ {Open using LibreOffice Writer}
+          \ lowriter %f
 " }}}
 

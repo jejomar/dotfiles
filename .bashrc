@@ -9,6 +9,7 @@
 export HISTCONTROL=ignoreboth:erasedups
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export EDITOR=vim
+export PATH=$HOME/.local/bin:$PATH
 
 alias ls='ls --group-directories-first --color=auto'
 alias ll='ls -l --group-directories-first --color=auto'
@@ -23,9 +24,11 @@ pfetch
 # Custom aliases
 alias playground='. /home/lichi/.local/share/virtualenvs/playground-LddSAEqJ/bin/activate'
 alias tree='tree -aC -L 3 -I '.git''
-alias yayu='yay -Syu --devel'
+alias yayu='yay -Syyu --devel'
 alias vf='vifm'
 alias v='vim'
+alias reflectorup='sudo reflector --verbose --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 20'
+alias restartnm='sudo systemctl stop NetworkManager && sudo systemctl start NetworkManager'
 
 # Editing configs
 alias wbst='vim /home/lichi/.config/waybar/style.css'

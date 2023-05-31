@@ -55,6 +55,7 @@
         "tooltip-format": "[ {ifname} via {gwaddr} <span font='Font Awesome 6 Free Solid 10'></span> ]",
         "format-linked": "[ {ifname} (No IP) <span font='Font Awesome 6 Free Solid 10'></span> ]",
         "format-disconnected": "[ Disconnected <span font='Font Awesome 6 Free Solid 10'>⚠</span> ]",
+        "on-click": "kitty nmtui",
     },
 
 	"wireplumber": {
@@ -62,6 +63,7 @@
 		"format-muted": "[ Muted <span font='Font Awesome 6 Free Solid 10'></span> ]",
 		// "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click": "pavucontrol",
+        "on-click-middle": "exec $HOME/.config/waybar/scripts/change-audio-output.sh",
 		"on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 2%+",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
 		"format-icons": ["", "", ""]

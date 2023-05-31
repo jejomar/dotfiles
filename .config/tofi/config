@@ -13,7 +13,7 @@
 	# characters not in the chosen font will fail to render.
 	#
 	# Otherwise, fonts are interpreted in Pango format.
-	font = "JetBrainsMono Nerd Font Mono"
+	font = "IBM Plex Mono"
 
 	# Point size of text.
 	font-size = 16
@@ -50,7 +50,7 @@
 	# Default text color
 	#
 	# All text defaults to this color if not otherwise specified.
-	text-color = #FFFFFF
+	text-color = #FCF1C7
 
 	# All pieces of text have the same theming attributes available:
 	#
