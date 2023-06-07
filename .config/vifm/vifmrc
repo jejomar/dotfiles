@@ -61,8 +61,7 @@ filextype {*.pdf},<application/pdf>
           \ {Open using mupdf}
           \ mupdf %f
 " Documents
-filextype {*odt, *.docx, *.doc},
+filextype {*odt,*.docx,*.doc},
           \ {Open using LibreOffice Writer}
           \ lowriter %f
 " }}}
-

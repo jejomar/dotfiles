@@ -27,7 +27,7 @@ alias tree='tree -aC -L 3 -I '.git''
 alias yayu='yay -Syyu --devel'
 alias vf='vifm'
 alias v='vim'
-alias reflectorup='sudo reflector --verbose --save /etc/pacman.d/mirrorlist --protocol 'http,https' --latest 20'
+alias reflectorup='sudo reflector --save /etc/pacman.d/mirrorlist --country 'CN,JP,HK,RU,SG,KR' --latest 30 --protocol 'https''
 alias restartnm='sudo systemctl stop NetworkManager && sudo systemctl start NetworkManager'
 
 # Editing configs

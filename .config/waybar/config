@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 26,
-    "spacing": 2,
+    "spacing": 4,
 
     "modules-left": [
         "tray",
@@ -15,10 +15,15 @@
 
     "modules-right": [
         "wireplumber",
+        "custom/dot",
         "backlight",
+        "custom/dot",
         "network",
+        "custom/dot",
         "battery",
+        "custom/dot",
         "clock",
+        "custom/dot",
         "custom/wlogout"
     ],
 
@@ -29,11 +34,11 @@
 
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "[ {:%a, %d %b %Y | %R} ]"
+        "format": "{:%a, %d %b %Y | %R}"
     },
 
     "backlight": {
-        "format": "[ {percent}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
+         "format": "{percent}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip-format": "Battery is at {percent}%"
     },
@@ -43,27 +48,27 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
-        "format-charging": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
-        "format-plugged": "[ {capacity}% <span font='Font Awesome 6 Free Solid 10'></span> ]",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{capacity}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
+        "format-charging": "{capacity}% <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format-plugged": "{capacity}% <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂁", "󰁹"]
     },
 
     "network": {
-        "format-wifi": "[ {essid} <span font='Font Awesome 6 Free Solid 10'></span> ]",
-        "format-ethernet": "[ {ipaddr}/{cidr} <span font='Font Awesome 6 Free Solid 10'></span> ]",
-        "tooltip-format": "[ {ifname} via {gwaddr} <span font='Font Awesome 6 Free Solid 10'></span> ]",
-        "format-linked": "[ {ifname} (No IP) <span font='Font Awesome 6 Free Solid 10'></span> ]",
-        "format-disconnected": "[ Disconnected <span font='Font Awesome 6 Free Solid 10'>⚠</span> ]",
+        "format-wifi": "{essid} <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format-ethernet": "{ipaddr}/{cidr} <span font='Font Awesome 6 Free Solid 10'></span>",
+        "tooltip-format": "{ifname} via {gwaddr} <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format-linked": "{ifname} (No IP) <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format-disconnected": "Disconnected <span font='Font Awesome 6 Free Solid 10'>⚠</span>",
         "on-click": "kitty nmtui",
     },
 
 	"wireplumber": {
-		"format": "[ {volume}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span> ]",
-		"format-muted": "[ Muted <span font='Font Awesome 6 Free Solid 10'></span> ]",
+		"format": "{volume}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
+		"format-muted": "Muted <span font='Font Awesome 6 Free Solid 10'></span>",
 		// "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click": "pavucontrol",
-        "on-click-middle": "exec $HOME/.config/waybar/scripts/change-audio-output.sh",
+        "on-click-middle": "exec $HOME/.config/waybar/scripts/audio-out-select.sh",
 		"on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 2%+",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
 		"format-icons": ["", "", ""]
@@ -76,18 +81,18 @@
         "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
-            "1": "1 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "2": "2 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "3": "3 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "4": "4 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "5": "5 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "6": "6 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "7": "7 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "8": "8 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "9": "9 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "10": "10 <span font='Font Awesome 6 Free Solid 10'></span>",
-            "11": "11 <span font='Font Awesome 6 Free Solid 10'></span>"
-        }
+            "1": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "2": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "3": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "4": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "5": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "6": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "7": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "8": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "9": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "10": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "11": "<span font='Font Awesome 6 Free Solid 10'></span>"
+        },
     },
 
     "hyprland/window": {
@@ -96,7 +101,7 @@
     },
 
     "custom/wlogout": {
-        "format": "",
+        "format": "<span font='BlexMono Nerd Font Mono 14'></span>",
         "interval": "once",
         "on-click": "wlogout -c 10 -r 10 -p layer-shell"
     },
@@ -110,10 +115,8 @@
         "on-click": "exec $HOME/.config/waybar/scripts/selection-record.sh",
         "on-click-middle": "exec $HOME/.config/waybar/scripts/monitor-record.sh"
     },
-
-	"custom/arrow01": {
-		"format": "<span font='Font Awesome 6 Free Solid 14'></span>",
-		"tooltip": false,
-	},
+    "custom/dot": {
+        "format": "<span font='BlexMono Nerd Font Mono 10'></span>",
+    },
 }
 

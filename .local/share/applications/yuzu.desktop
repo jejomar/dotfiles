@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Yuzu
+Exec=/home/lichi/Downloads/Yuzu/run.sh
+Type=Application
+Icon=
+Comment=
+Path=/home/lichi/Downloads/Yuzu
+Terminal=false
+StartupNotify=false
