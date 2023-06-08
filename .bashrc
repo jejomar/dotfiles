@@ -29,6 +29,8 @@ alias vf='vifm'
 alias v='vim'
 alias reflectorup='sudo reflector --save /etc/pacman.d/mirrorlist --country 'CN,JP,HK,RU,SG,KR' --latest 30 --protocol 'https''
 alias restartnm='sudo systemctl stop NetworkManager && sudo systemctl start NetworkManager'
+alias convart='convert cover.jpg -resize 1000x1000 cover.jpg'
+alias cleanart='zip -m cover.zip cover.jpg'
 
 # Editing configs
 alias wbst='vim /home/lichi/.config/waybar/style.css'

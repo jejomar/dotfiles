@@ -6,7 +6,10 @@
 
     "modules-left": [
         "tray",
+        "custom/dot",
         "custom/wf-recorder",
+        "custom/dot",
+        "mpd"
     ],
 
     "modules-center": [
@@ -34,7 +37,7 @@
 
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%a, %d %b %Y | %R}"
+        "format": "{:%a, %d %b %Y   %R 󰥔}",
     },
 
     "backlight": {
@@ -49,7 +52,7 @@
             "critical": 15
         },
         "format": "{capacity}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
-        "format-charging": "{capacity}% <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format-charging": "{capacity}% <span font='Font Awesome 6 Free Solid 10'>󰂄</span>",
         "format-plugged": "{capacity}% <span font='Font Awesome 6 Free Solid 10'></span>",
         "format-icons": ["󰁺", "󰁼", "󰁾", "󰂁", "󰁹"]
     },
