@@ -9,7 +9,6 @@
         "custom/dot",
         "custom/wf-recorder",
         "custom/dot",
-        "mpd"
     ],
 
     "modules-center": [
@@ -51,9 +50,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% <span font='Font Awesome 6 Free Solid 10'>{icon}</span>",
-        "format-charging": "{capacity}% <span font='Font Awesome 6 Free Solid 10'>󰂄</span>",
-        "format-plugged": "{capacity}% <span font='Font Awesome 6 Free Solid 10'></span>",
+        "format": "{capacity}% <span font='BlexMono Nerd Font Mono 11'>{icon}</span>",
+        "format-charging": "{capacity}% <span font='BlexMono Nerd Font Mono 11'>󰂄</span>",
+        "format-plugged": "{capacity}% <span font='BlexMono Nerd Font Mono 11'>󰂏</span>",
         "format-icons": ["󰁺", "󰁼", "󰁾", "󰂁", "󰁹"]
     },
 
@@ -87,12 +86,12 @@
             "1": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "2": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "3": "<span font='Font Awesome 6 Free Solid 10'></span>",
-            "4": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "4": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "5": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "6": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "7": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "8": "<span font='Font Awesome 6 Free Solid 10'></span>",
-            "9": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "9": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "10": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "11": "<span font='Font Awesome 6 Free Solid 10'></span>"
         },

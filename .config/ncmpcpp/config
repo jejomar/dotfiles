@@ -5,3 +5,8 @@ mpd_music_dir   "/home/lichi/Music"
 
 # Send notification on song change
 execute_on_song_change = songinfo
+
+# Execute on start
+startup_screen = media_library
+
+ask_before_clearing_playlists = no

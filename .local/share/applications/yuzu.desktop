@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Yuzu
-Exec=/home/lichi/Downloads/Yuzu/run.sh
+Exec=/home/lichi/emulation/switch/run.sh
 Type=Application
 Icon=
 Comment=
-Path=/home/lichi/Downloads/Yuzu
+Path=/home/lichi/emulation/switch
 Terminal=false
 StartupNotify=false

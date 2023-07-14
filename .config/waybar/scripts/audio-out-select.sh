@@ -12,7 +12,7 @@ while read -r id name; do
 done <<< "$output"
 
 # Use Zenity to create the list dialog
-selection=$(zenity --list --title "Select Sink" --column "ID" --column "Name" "${options[@]}")
+selection=$(zenity --list --title "Select Sink" --column "ID" --column "Name" "${options[@]}" --width "320" --height "240")
 
 # Print the selected option
 echo "Selected option: $selection"
