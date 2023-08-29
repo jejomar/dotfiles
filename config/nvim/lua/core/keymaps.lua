@@ -11,3 +11,6 @@ vim.keymap.set('n', '<leader>w', ':up<cr>', { desc = 'Update' }) -- Write only i
 
 -- Spawn Mason
 vim.keymap.set('n', '<leader>i', ':Mason<cr>', { desc = 'Open Mason window' })
+
+-- Format current file
+vim.keymap.set('n', '<leader>f', ':Format<cr>', { desc = 'Format current file' })
