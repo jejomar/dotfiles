@@ -24,7 +24,7 @@ rsync -av $SRC_CONFIG/kitty $CONFIG_DIR/
 # rsync -av $SRC_CONFIG/ncmpcpp $CONFIG_DIR/
 # rsync -av $SRC_CONFIG/sddm $CONFIG_DIR/
 # rsync -av $SRC_CONFIG/starship $CONFIG_DIR/
-# rsync -av $SRC_CONFIG/swappy $CONFIG_DIR/
+rsync -av $SRC_CONFIG/swappy $CONFIG_DIR/
 # rsync -av $SRC_CONFIG/tofi $CONFIG_DIR/
 # rsync -av $SRC_CONFIG/vifm $CONFIG_DIR/
 rsync -av $SRC_CONFIG/waybar $CONFIG_DIR/
