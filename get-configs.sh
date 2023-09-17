@@ -32,3 +32,4 @@ rsync -av $SRC_CONFIG/waybar $CONFIG_DIR/
 # rsync -av $HOME/.local/bin $LOCALBIN_DIR/
 rsync -av $SRC_LOCAL_APP $LOCALSHARE_DIR/
 rsync -av --exclude 'watch_later' $SRC_CONFIG/mpv $CONFIG_DIR/
+rsync -av $SRC_CONFIG/nvim $CONFIG_DIR/
