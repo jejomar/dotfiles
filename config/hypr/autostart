@@ -1,0 +1,1 @@
+exec-once = waybar & hyprpaper & blueman-applet & nm-applet
