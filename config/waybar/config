@@ -31,7 +31,6 @@
     //////////////////////////
 
     "hyprland/workspaces": {
-    	"all-outputs": true,
     },
 
     "wireplumber": {
