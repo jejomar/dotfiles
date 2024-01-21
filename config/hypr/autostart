@@ -1,1 +1,5 @@
-exec-once = waybar & hyprpaper & blueman-applet & nm-applet
+# exec-once = hyprpaper
+exec-once = waybar & blueman-applet & nm-applet
+exec-once = waypaper --restore
+
+exec-once = eval $(/run/wrappers/bin/gnome-keyring-daemon --start --components=ssh)

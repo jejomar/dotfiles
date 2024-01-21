@@ -1,30 +1,37 @@
-#
-# ~/.bashrc
-#
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# Commands that should be applied only for interactive shells.
+[[ $- == *i* ]] || return
+
+HISTCONTROL=erasedups:ignorespace:ignoredups
+HISTFILESIZE=2147483647
+HISTSIZE=2147483647
+
+shopt -s histappend
+shopt -s checkwinsize
+shopt -s extglob
+shopt -s globstar
+shopt -s checkjobs
+
+alias fixnet='sudo rmmod ath10k_pci && sudo modprobe ath10k_pci'
+alias ga='git add .'
+alias gc='git commit'
+alias gp='git push origin main'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-
-# History control
-export HISTCONTROL="erasedups:ignorespace"
-export HISTSIZE=
-export HISTFILESIZE=
-
-# Aliases: Config files
+alias gs='git status'
 alias hl='nvim $HOME/.config/hypr/hyprland.conf'
+alias hmrb='home-manager switch --flake $HOME/Repositories/nixos-config'
+alias la='ls -la --color=auto'
+alias ll='ls -l --color=auto'
+alias nv='nvim'
+alias nx='cd $HOME/Repositories/nixos-config'
+alias nxrb='sudo nixos-rebuild switch --flake $HOME/Repositories/nixos-config'
 
-# Musicbrainz Picard
-alias convart='convert cover.jpg -resize 1000x1000 cover.jpg'
-alias cleanart='zip -m cover.zip cover.jpg'
+if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
+  . "/nix/store/w0lab72j89rr5sh8l7l85mc3k49yrn7w-bash-completion-2.11/etc/profile.d/bash_completion.sh"
+fi
 
-# Ensure that only one 'ssh-agent' process runs at a time
-# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#     ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-# fi
-# if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
-#     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-# fi
+if test -n "$KITTY_INSTALLATION_DIR"; then
+  source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"
+fi
+

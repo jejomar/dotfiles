@@ -3,7 +3,7 @@
 require('nvim-treesitter.configs').setup {
 
   -- Add langauges to be installed for treesitter
-  ensure_installed = { 'lua', 'python', 'vim', 'vimdoc', 'html', 'css', 'javascript', 'typescript' },
+  ensure_installed = {},
 
   -- Auto install is disabled by default. Explicitly declared here for clearer understanding of the config
   auto_install = false,

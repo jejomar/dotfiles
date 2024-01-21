@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Game 712465656758665259
+Exec=/nix/store/wsqmyxllm825644vv9v1fkhc5zn65bc4-yuzu-early-access-3966/bin/.yuzu-wrapped %u
+Type=Application
+NoDisplay=true
+Categories=Discord;Games;
+MimeType=x-scheme-handler/discord-712465656758665259;

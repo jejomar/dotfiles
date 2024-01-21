@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Batman: Arkham Asylum GOTY Edition
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/35140
+Icon=steam_icon_35140
+Terminal=false
+Type=Application
+Categories=Game;
